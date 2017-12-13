@@ -1,7 +1,7 @@
 The automation of UFO Analysis is achieved by using an AutoIT script that repeatedly invokes the UFO Analyser Analyse ALL function 
 followed by the Move_Accepted_Clips R script.
 
-The UFOAuto-1-5 Live SRB2.au3 script reads in an ordered list of DDL values and presents each value in turn to UFO Analyser.
+The UFOAuto-1-5 Live SRB2.au3 script reads in an ordered list of DDL values (there is currently one for each camera - the user is asked to select which list to use for which camera) and presents each value in turn to UFO Analyser.
 It then runs Analyse ALL from the Main TAB using that value of DDL
 
 At the end of the UFO Analyser run, the script switches control to the RStudio Console and runs Move_Accepted_Clips.R
