@@ -1,4 +1,4 @@
-Monthly_Report.rmd should be run under RStudio - it will produce the monthly report for Clanfield Metero Station 
+Monthly_Report.rmd should be run under RStudio - it constructs the monthly report for the Clanfield Meteor Station 
 in HTML or PDF depending on which option is selected from the pull down menu on the Knit button
 
 The script invokes all the Child rmarkdown scripts from its current folder.
