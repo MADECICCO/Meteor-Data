@@ -8,3 +8,5 @@ written to handle this when access is regularised.
 
 In addition, to the merge process, there are scripts to interrogate each network by station so that we can understand
 how up-to-date the data is and whether or not we should proceed with orbit analysis.
+
+Note. Once Read_UKMON_Old.R has been run once, there is no need to rerun it as that data is dormant.
