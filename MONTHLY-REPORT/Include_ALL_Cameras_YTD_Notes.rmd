@@ -1,0 +1,5 @@
+Notes/Issues:
+  
+It's been a good year for flying insects with 6,725 recorded so far this year although in `r params$Rpt_Month` the number of insect visits dropped whilst the number of meteors observed was up substantially, so the 'gap' has narrowed.
+  
+2,194 additional events were recorded in `r params$Rpt_Month`.

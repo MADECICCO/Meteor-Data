@@ -1,0 +1,2 @@
+## Maintenance
+As usual, after the download of each month's data, all pending important Windows updates were installed on each PC, followed by a system reboot. 

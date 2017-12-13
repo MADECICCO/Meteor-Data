@@ -1,0 +1,14 @@
+## Meteor Magnitudes
+In the following table "Fireball" refers to events brighter than or equal to magnitude -3, Bright Meteors are other events brighter than magnitude zero, and Others are the rest. 
+  
+
+```{r echo = FALSE, include = TRUE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","ALL",params$Rpt_Year,params$Rpt_Mon,"_Meteors_Summary.csv",sep=""))
+
+File_Out <<- data.frame()
+File_Out <<- read.csv(File_In)
+kable(File_Out[,1:6])
+```
+  

@@ -1,0 +1,11 @@
+  
+Consequently, the Clanfield Top 5 for `r params$Rpt_Year` now looks as follows:
+```{r echo = FALSE, include = TRUE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","ALL ",params$Rpt_Year," YTD_Top5.csv",sep=""))
+
+File_Out <<- data.frame()
+File_Out <<- read.csv(File_In)
+kable(File_Out[,1:2])
+```

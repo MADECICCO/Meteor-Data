@@ -1,0 +1,17 @@
+# Appendix A: 2017 Meteor Counts, by Shower.
+  
+The following table attributes all meteors observed to the end of the `r params$Rpt_Month` `r params$Rpt_Year` reporting period to the known (J8) showers:
+\tiny
+  
+thead {display: table-header-group;}
+  
+```{r echo = FALSE, include = TRUE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/",params$Rpt_Year,"YTDALL_Shower_summary.csv",sep=""))
+
+File_Out <<- data.frame()
+File_Out <<- read.csv(File_In)
+
+kable(File_Out[,1:16])
+```

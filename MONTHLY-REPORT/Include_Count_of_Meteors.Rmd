@@ -1,0 +1,11 @@
+## Meteor Counts
+  
+This category contains the clips we are looking for - but remember they are classified remotely so there is no guarantee that they are all genuine. Some will be picked up and discarded by the Analysis software as 'too fast', 'too slow', 'curved', or just 'none' ! But the vast majority are genuine and so the chart truly reflects the volumes of meteors that we are observing.
+
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Category_Bar_",params$Rpt_Year,"_YTD__Meteor.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

@@ -1,0 +1,11 @@
+## Twilight Counts
+  
+The cameras are set to turn on/off based on a feed from a light sensor, plus UFO capture only detects from sunset to sunrise so numbers of these events are consistently low. There are however occasions when something triggers the camera but the image is too bright to see what it was. Unfortunately, by trying to minimise this count, we missed the fireball on the morning of 25th November as the cameras had already switched off.
+
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Category_Bar_",params$Rpt_Year,"_YTD__Twilight.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

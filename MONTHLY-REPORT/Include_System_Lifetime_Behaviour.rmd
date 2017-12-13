@@ -1,0 +1,14 @@
+# System Lifetime Behaviour
+  
+The following chart shows the total counts for "Meteor" event captured by the Clanfield cameras. 
+  
+NB. For similar charts covering the remaining (non Meteor) categories, refer to Appendix B at the end of this report.
+  
+NB. Starting in the new year I will drop the first two years from this chart to aid reading the x axis labels !
+  
+```{r run-count-of-meteors, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Meteors.Rmd'))
+```
+`r paste(out, collapse = '\n')`

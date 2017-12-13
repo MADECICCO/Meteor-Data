@@ -1,0 +1,13 @@
+  
+# Summary
+
+Getting back to normal, but with one eye towards Christmas!
+
+There were a considerable number of meteors this month and amongst them some major fireballs (two on the night of 24th/25th !) which made national headlines. Unfortunately neither of those two were captured by the Clanfield cameras, although you can see the glow of the 'Midnight' Fireball down the western side of the field of view of our North West camera.
+
+As mentioned briefly last month UKMON held a very successful conference at the Natural History Museum - I have included a link to a writeup of the event in the News section.
+  
+I also take this opportunity to process the 2017 Perseids data through R Suite and provide a few of the many charts it produces to capture the highlights
+  
+Finally, you may notice slight changes to the format of this report. Most significantly the analysis of Category over the lifetime of the system has been moved from the main body of the report to a separate Appendix. Otherwise, the changes are down to more automation. I decided to use RMarkdown with inline R scripting and a package called Knitr to produce the report. I can now prepare it (as HTML or PDF or even Word if I were so inclined) at the press of a button. My commentary is still added manually but everything else is pulled together from the outputs of my R Reporting Scripts.
+  

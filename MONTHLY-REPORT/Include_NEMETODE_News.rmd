@@ -1,0 +1,14 @@
+## NEMETODE News 
+More fireballs! on 19th at 05:47:05 William Stewart captured a nice spectrum from a mag -7.2 Leonid on his camera in Cheshire.It was also captured on multiple video and radar systems across the country. The spectrum is significant ... Bill Ward remarked "I've never seen the Ca II lines split in the first order before on a video system. It's an impressive catch."
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste("D:/Meteor Camera Management/Monthly Reports/",params$Rpt_Month," ",params$Rpt_Year,"/","WS_Leonid_Spectrum.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```
+Another fireball was captured by William at 17:06:42 GMT on 29th November 2017. This one was also captured by Nick James from Chelmsford, and was determined to be a mag -4.8 December Alpha Draconid 
+  
+For details of both of these events see ... 
+  
+http://nemetode.org/  

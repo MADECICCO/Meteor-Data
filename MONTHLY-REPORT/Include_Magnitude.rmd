@@ -1,0 +1,11 @@
+## Magnitude Spread
+  
+A spread of calculated magnitudes for the 2017 events is shown below. Notice that the newer, Watec, camera is not picking up the fainter magnitudes.
+  
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Mag_Spread_",params$Rpt_Year,"_YTD_ALL_ .jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

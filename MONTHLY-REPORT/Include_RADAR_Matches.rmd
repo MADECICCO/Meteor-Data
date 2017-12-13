@@ -1,0 +1,27 @@
+## Clanfield RADAR Matches
+  
+UFO Orbit results produced for our RADAR data (All 2017) .
+  
+Just as a reminder, Steve Futcher matches the RADAR data against the latest video data and provides a file of all RADAR records that matched +/- a couple of seconds. So this file of Clanfield data is then matched against the ALLUK data file (plus or minus one second) to find those where we can determine the trail. These are then submitted to UFO Orbit which charts the trails as below .
+  
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste("D:/Meteor Camera Management/Monthly Reports/",params$Rpt_Month," ",params$Rpt_Year,"/","B",params$Rpt_Year,"0103_GMAP.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```
+  
+As usual we see events in all directions - in fact it would be difficult to suggest a preferred direction. The greater challenge is to try to correlate significant RADAR events with significant video events. It seems that the orientation of the meteor trail plays a big role in this and so it would be fascinating to analyse both sets of data to see if there is any way to predict the observed results.
+  
+As a first step, the following chart shows the same data but filtered by the (more stringent) Q3 Quality criteria. Interestingly, this loses most of the cross channel events, although this may just be down to the lack of coverage of the airspace here.However,with the events that remain, a clear alignment is apparent (and could it be that the few that are not aligned are temporal coincidences?).
+  
+Watch this space ...
+
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste("D:/Meteor Camera Management/Monthly Reports/",params$Rpt_Month," ",params$Rpt_Year,"/","B",params$Rpt_Year,"0103_GMAP Q3.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

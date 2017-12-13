@@ -1,0 +1,13 @@
+## Moon Counts
+  
+The moon appears in a lot of our videos, but only occasionally does it trigger the cameras. This may be due to atmospheric disturbance but is more usually down to clouds messing about with its shape/intensity.
+  
+So, low numbers imply clear skies when the moon was in the field of view
+  
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Category_Bar_",params$Rpt_Year,"_YTD__Moon.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

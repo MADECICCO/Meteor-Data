@@ -1,0 +1,83 @@
+Event `r File_Prt[i,]$LocalTime`
+------------------------------------
+  
+```{r echo = FALSE, include = TRUE, message = FALSE, warning = FALSE}
+From_Folder <<- params$UFO_Folder
+  JPGframe <<- data.frame()
+  JPGframe <<- File_Prt[i,]
+  XYear <<- substr(File_Prt[i,]$LocalTime,1,4)
+  XMonth <<- substr(File_Prt[i,]$LocalTime,5,6)
+  XDay <<- substr(File_Prt[i,]$LocalTime,7,8)
+  XHour <<- substr(File_Prt[i,]$LocalTime,10,11)
+  XCamera <<- substr(File_Prt[i,]$Loc_Cam,12,13)
+  
+  ## correct folder reference for morning meteors
+  if (as.numeric(XHour) < 12) {
+    XDay <<- as.character(as.numeric(XDay)-1)
+    if (as.numeric(XDay) < 10) {
+      XDay <<- paste("0",XDay,sep="")
+    }
+    if (XDay =="00") {
+      XDay <<- "31"
+      XMonth <<- as.character(as.numeric(XMonth)-1)
+      if (as.numeric(XMonth) < 10) {
+        XMonth <<- paste("0",XMonth,sep="")
+      }
+      if (XMonth == "00") {
+        XMonth <<- "12"
+        XYear <<- as.character(as.numeric(XYear)-1)
+      }
+      if (XMonth == "04" |
+          XMonth == "06" |
+          XMonth == "09" |
+          XMonth == "11") {
+            XDay <<- "30"
+      }
+      if (XMonth == "02") {
+        if(leap_date(as.numeric(XYear) == FALSE)){
+            XDay <<- "28"
+        } else {
+          XDay <<- "29"
+        }    
+      }
+    }
+  }
+  ## start with main path
+  XPath <<- paste(From_Folder,"/UFO/UFOData/",sep="")
+  
+  ## add camera folder
+  if (XCamera == "NW") {
+    XPath <<- paste(XPath, "NORTH WEST/", sep = "")
+  }  else {
+    if (XCamera =="NE") {
+      XPath <<- paste(XPath, "NORTH EAST/", sep = "")
+    }    else {
+      if (XCamera =="SE") {
+        XPath <<- paste(XPath, "SOUTH EAST/", sep = "")
+      }
+    }
+  }  
+  ## add year folder
+  XPath <<- paste(XPath,XYear,"/",sep = "")
+  
+  ## add month folder
+  XPath <<- paste(XPath,XYear,XMonth,"/",sep = "")
+  
+  ## add day folder <<###### BEWARE previous day #############
+  if (substr(XDay,1,1) == "0") {
+    
+  }
+  XPath <<- paste(XPath,XYear,XMonth,XDay,"/",sep = "")
+  
+  ## add filename
+  XPath <<- paste(XPath,"M",File_Prt[i,]$LocalTime,"_",substring(File_Prt[i,]$Loc_Cam,2,13),"P",sep = "")
+  XPath <<- paste(XPath,".jpg",sep="")
+```  
+  
+```{r echo = FALSE, out.width='75%', fig.align="center"}
+
+
+library(knitr)
+File_In <<- XPath
+knitr::include_graphics(File_In)
+```

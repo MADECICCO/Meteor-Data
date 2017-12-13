@@ -1,0 +1,420 @@
+---
+title: "Clanfield Meteor Station Report 2017-08"
+header-includes: \usepackage{graphicx}
+graphics: yes
+author: 'Compiled by: Steve Bosley'
+date: 'For Reporting Period 1st : 31st December 2017'
+output:
+  html_document:
+    theme: united
+    toc: yes
+    toc_depth: 2
+  odt_document: default
+  pdf_document:
+    keep_tex: yes
+    toc: yes
+    toc_depth: 2
+params:
+  Data_Folder:
+    label: "Source of Reporting Data"
+    value: D:/Meteor Camera Management/Monthly Reports/
+  UFO_Folder:
+    label: "UFO Capture Top Level Library"
+    value: D:/Meteor Watch/  
+  Rpt_Year:
+    label: "Reporting Year:"
+    value: 2017
+    input: select
+    choices: [2014, 2015, 2016, 2017, 2018]
+  Rpt_Month:
+    label: "Reporting Month:"
+    value: December
+    input: select
+    choices: [January, February, March, April, May, June, July, August, September, October, November, December]
+  Rpt_Mon: 
+    label: "Month Prefix:"
+    value: Dec
+    input: select
+    choices: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+  Rpt_Mon_Num:
+    label: "Month Number:"
+    value: 12
+    input: slider
+    min: 01
+    max: 12
+    step: 1
+  Rpt_Mon_Num_Plus_1:
+    label: "Month Number plus 1:"
+    value: 13
+    input: slider
+    min: 02
+    max: 13
+    step: 1
+---
+
+
+```{r setup, include=FALSE}
+options(scipen = 99)
+knitr::opts_chunk$set(echo = TRUE)
+```
+  
+\pagebreak
+  
+# Change History
+  
+V0.1  Initial Draft
+  
+V1.0  Final version, for publication
+  
+\pagebreak
+  
+```{r run-summary, include=FALSE}
+library(knitr)
+out = NULL
+out = c(out, knit_child('Include_Summary.Rmd'))
+
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-highlights, include=FALSE}
+library(knitr)
+out = NULL
+out = c(out, knit_child('Include_Highlights.Rmd'))
+
+```
+`r paste(out, collapse = '\n')`
+
+```{r run-top5, include=FALSE}
+out = NULL
+out = c(out, knit_child('Include_Top_5.Rmd'))
+
+```
+`r paste(out, collapse = '\n')`
+  
+All the showers mentioned in this report are those calculated by UFO Analyser using data from a single station (camera). When they are consolidated with data from other stations it is quite possible that the final determined shower will differ from that reported here.
+  
+NB. The full table of `r params$Rpt_Year` YTD meteor counts can be found in Appendix A, at the end of this document. 
+  
+\pagebreak
+  
+```{r run-fireball-list, include=FALSE}
+out = NULL
+out = c(out, knit_child('Include_Fireball_List.Rmd'))
+
+```
+`r paste(out, collapse = '\n')`
+
+```{r run-fireball-images, include=FALSE}
+out = NULL
+  
+for (i in 1:rowsprt) {
+  out = c(out, knit_child('Include_Fireball_JPGs.Rmd'))
+}
+```
+`r paste(out, collapse = '\n')`
+
+
+\pagebreak
+  
+```{r run-data-sharing, include=FALSE}
+out = NULL
+out = c(out, knit_child('Include_Data_Sharing.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+
+```{r run-meteor-magnitudes, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Meteor_Magnitudes.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+
+```{r run-maintenance, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Maintenance.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+\pagebreak
+  
+```{r run-nw-camera-status, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_NW_Camera_Status.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+  
+```{r run-nw-camera-notes, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_NW_Camera_Notes.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+
+\pagebreak
+  
+```{r run-ne-camera-status, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_NE_Camera_Status.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+  
+```{r run-ne-camera-notes, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_NE_Camera_Notes.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+\pagebreak
+  
+```{r run-se-camera-status, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_SE_Camera_Status.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-se-camera-notes, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_SE_Camera_Notes.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+\pagebreak
+  
+```{r run-all-camera-status-ytd, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_ALL_Cameras_YTD_Status.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-all-camera-notes-ytd, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_ALL_Cameras_YTD_Notes.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+
+\pagebreak
+  
+```{r run-ufo-orbit, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_UFO_Orbit.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-radar-matches, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_RADAR_Matches.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+\pagebreak
+  
+#News
+ 
+```{r run-ukmon-news, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_UKMON_News.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-nemetode-news, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_NEMETODE_News.Rmd'))
+```
+`r paste(out, collapse = '\n')`  
+  
+```{r run-hag-news, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_HAG_News.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-imo-news, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_IMO_News.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-meteornews, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_MeteorNews.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+\pagebreak
+  
+#2017 Perseids Analysis
+  
+```{r run-r-suite, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_RSuite.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+  
+\pagebreak
+  
+```{r run-system-lifetime-behaviour, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_System_Lifetime_Behaviour.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+
+\pagebreak
+  
+# Data Quality
+  
+```{r run-analysis-automation, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Analysis_Automation.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+
+\pagebreak
+  
+  
+```{r run-sd-v-cdeg, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_SD_v_cDeg.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+\pagebreak
+  
+```{r run-magnitude, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Magnitude.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+\pagebreak
+  
+```{r app-a-shower-counts, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_App_A_Shower_Counts.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+\pagebreak
+  
+# Appendix B: Video Captures, by Category.
+  
+\normalsize
+
+The following charts show the total counts for each of the defined event categories captured by the Clanfield cameras, with the data for 2014-16 for comparison. By monitoring changes in these counts, it is possible to highlight out of line situations - some of which need to be resolved (eg. electrical interference, spider incursions etc.) and others which can only be tolerated (eg. bat and bird fly bys) but, fortunately tend to be seasonal. 
+  
+NB. Keep an eye on the scale of the Y-axis to see how significant the events captured in each chart are.
+  
+NB. Starting in the new year I will drop the first two years from this chart to aid reading the x axis labels !  
+  
+```{r run-count-of-meteors2, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Meteors.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-aircraft, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Aircraft.Rmd'))
+```
+`r paste(out, collapse = '\n')`  
+
+```{r run-count-of-bats, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Bats.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-birds, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Birds.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-flashes, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Flashes.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-insects, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Insects.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-moon-effects, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Moon_Effects.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-noise, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Noise.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-spiders, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Spiders.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-twilight, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Twilight.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-weather, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_Weather.Rmd'))
+```
+`r paste(out, collapse = '\n')`
+  
+```{r run-count-of-white-noise, include=FALSE}
+out = NULL
+  
+out = c(out, knit_child('Include_Count_of_White_Noise.Rmd'))
+```
+`r paste(out, collapse = '\n')`  
+  
+  
+  
+# End of Report        
+  

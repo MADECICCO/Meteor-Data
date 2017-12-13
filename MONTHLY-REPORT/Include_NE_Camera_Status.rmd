@@ -1,0 +1,15 @@
+# North East Camera Status: `r params$Rpt_Month` `r params$Rpt_Year`
+  
+## Events by Category and by Day
+The following charts show the clips captured by the North East camera during `r params$Rpt_Month`.
+  
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Pareto_",params$Rpt_Year,"_",params$Rpt_Mon,"_north east_.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Daily_Bar_",params$Rpt_Year,"_",params$Rpt_Mon,"_north east_.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

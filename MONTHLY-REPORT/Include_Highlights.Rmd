@@ -1,0 +1,23 @@
+```{r echo = FALSE, include = TRUE, message = FALSE, warning = FALSE}
+library(dplyr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/",params$Rpt_Year,params$Rpt_Mon,"ALL","Showers_With_More_Than_5.csv",sep=""))
+
+File_Out <<- data.frame()
+File_Out <<- read.csv(File_In)
+File_Prt <<- select(File_Out,Shower,IAU,Name,3+params$Rpt_Mon_Num,3+params$Rpt_Mon_Num_Plus_1) ## NB. must resolve to integer column positions
+Most_Prolific <<- File_Prt[1,]
+Next_Most_Prolific <<- File_Prt[2,]
+MP_Shower <<- Most_Prolific$Name
+MP_Count <<- Most_Prolific[4]
+NMP_Count <<- Next_Most_Prolific[4]
+MP_Times <<- round(MP_Count / NMP_Count,digits=0)
+Fives_Count <<- dim(File_Prt)[1]
+```
+  
+## Highlights
+We saw `r MP_Count` `r MP_Shower` in `r params$Rpt_Month` (`r MP_Times` times more than any other shower during the month), although there were at least five events from a further `r Fives_Count -1` showers.
+  
+So, from the 2,194 video clips captured by the Clanfield cameras in `r params$Rpt_Month` `r params$Rpt_Year` , a total of 778 turned out to be usable meteors (excluding 19 on the morning of 1st November but including 22 on the morning of 1st December).
+  
+The following (reduced) table shows showers observed during `r params$Rpt_Month` with more than five events, sorted in descending order of frequency .
+  

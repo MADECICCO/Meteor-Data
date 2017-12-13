@@ -1,0 +1,6 @@
+  
+## Data Sharing
+Results for `r params$Rpt_Month` were posted to the NEMETODE Google Drive and UKMON AWS Server on 2nd December.
+  
+Copies of our data files were also forwarded to Steve Futcher for comparison with Clanfield RADAR capture data.
+

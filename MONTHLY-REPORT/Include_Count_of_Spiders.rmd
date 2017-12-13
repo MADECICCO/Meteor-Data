@@ -1,0 +1,11 @@
+## Spider Counts
+  
+For most of this year the spiders have been left to their own devices . they have had their moments, but they either got bored or, more likely, predated by the birds. Spider repellent has been applied on a couple of occasions, but they don't seem too bothered by it! Spider numbers are now right down, although I think there is a cobweb on the SE camera which occasionally gets illuminated by stray lights.
+
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Category_Bar_",params$Rpt_Year,"_YTD__Spider.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

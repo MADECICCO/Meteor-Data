@@ -1,0 +1,11 @@
+## Insect Counts
+  
+A very good year for insects flying in front of our cameras (flies, moths, daddy long-legs, etc) . excellent prey for the marauding bats and swallows. Numbers have now dropped down 'into the noise'.
+
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Category_Bar_",params$Rpt_Year,"_YTD__Insect.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

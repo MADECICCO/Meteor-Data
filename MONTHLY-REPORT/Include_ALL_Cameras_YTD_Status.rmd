@@ -1,0 +1,12 @@
+# 2017 All Cameras - Year to Date Results
+  
+## Total Counts
+The following chart shows the 34,233 events captured to date across all three cameras in 2017.
+  
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Pareto_",params$Rpt_Year,"_YTD_ALL_.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

@@ -1,0 +1,15 @@
+## Analysis Automation
+  
+The following chart shows how quickly the `r params$Rpt_Month` data for each camera was processed.
+  
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Residuals for ",params$Rpt_Mon," ",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```
+  
+Again, the NW camera data did not drop as quickly which meant the early iterations for this camera took considerably longer to process. This could just be a coincidence but is worth monitoring - perhaps the DDL sequence needs recalculating (now that I have another 6 months of data).
+  
+For information, the process took 1hr 53 mins for the NW data, 1hr 1min for the SE data and 24mins for the NE data. Looked at another way, the NW meteor clips were 35% of the total meteor clips recorded for the month but took 57% of the total analysis time; the NE clips (19% of the clips) took 12% of the analysis time, whereas the SE clips (46% of the clips) processed in only 31% of the analysis time. Go figure !

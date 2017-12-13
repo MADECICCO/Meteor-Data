@@ -1,0 +1,42 @@
+## SD v cDeg Optimisation
+  
+Getting back to routine analysis...
+  
+The table below shows how the NW, NE, SE Clanfield data for `r params$Rpt_Month` compared against the quality criteria used by UKMON and NEMETODE
+  
+As members of UKMON, we endeavour to get SD* (the Standard Deviation of angular velocity of the mid frame of an event) to less than 0.3. 
+  
+As members of NEMETODE, we try to optimise our data to get cDeg ( the least squares fit to the angle of the meteor track) to be less than 0.02).
+  
+
+```{r echo = FALSE, include = TRUE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(knitr)
+File_In <<- (paste("D:/Meteor Camera Management/Monthly Reports/",params$Rpt_Month," ",params$Rpt_Year,"/",params$Rpt_Year,params$Rpt_Mon_Num,"ALLNAData_Quality.csv",sep=""))
+
+File_Out <<- data.frame()
+File_Out <<- read.csv(File_In)
+kable(File_Out[,1:3])
+```  
+    
+Charting these results over time we can see a clear improvement :
+  
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste("D:/Meteor Camera Management/Monthly Reports/",params$Rpt_Month," ",params$Rpt_Year,"/","Chart_SD_V_CDEG_ALL_ALL_ALL_ .jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```
+  
+Plotting SD and cDeg against each other for all 2017 events we see the following spread .
+  
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste("D:/Meteor Camera Management/Monthly Reports/",params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Scatter_SD_CDEG_",params$Rpt_Year,"_YTD_ALL_ .jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```
+  
+There are outriders but only a few - the vast majority of events were optimised to within the SD and cDeg limits.

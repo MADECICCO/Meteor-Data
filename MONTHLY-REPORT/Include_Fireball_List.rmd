@@ -1,0 +1,25 @@
+```{r echo = FALSE, include = TRUE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(lubridate)
+  
+File_In <<- (paste("D:/Meteor Camera Management/Monthly Reports/",params$Rpt_Month," ",params$Rpt_Year,"/","ALL",params$Rpt_Year,params$Rpt_Mon,"_Fireball_List.csv",sep=""))
+File_Out <<- read.csv(File_In)
+File_Prt <<- File_Out
+
+# sort in order of decreasing magnitude
+File_Prt <<- arrange(File_Prt,Mag)
+dimprt <<- dim(File_Prt)
+rowsprt <<- dimprt[1]
+colsprt <<- dimprt[2]
+```
+  
+## Fireballs and Bright Meteors, plus other clips of interest
+There were `r rowsprt` meteors observed in `r params$Rpt_Month` with a calculated absolute magnitude brighter than -3.0
+  
+NB. Elsewhere, you will see that Fireballs are defined to be brighter than magnitude -4. My use of -3 in this report helps pick out other meteors of interest.
+
+```{r echo = FALSE, include = TRUE, message = FALSE, warning = FALSE}
+library(knitr)
+
+kable(File_Prt[,1:5])
+```

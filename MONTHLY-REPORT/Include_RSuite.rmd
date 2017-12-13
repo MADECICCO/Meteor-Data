@@ -1,0 +1,57 @@
+With the summer being so busy I have only now been able to run the UKMON R Suite to look at this year's Perseids. 
+  
+A couple of days before the peak I was interviewed by a young reporter from Solent TV who asked me to talk about the Perseids, how to view them and what to expect so a bit of a refresher was in order ... which came in useful later. The video is on Youtube (and the HAG website).
+  
+To be honest, conditions were not going to be ideal for viewing over the peak with a 72% gibbous moon rising around 11pm and cloud cover forecast to be marginal. So I thought I would leave it to the cameras this year. However, early on the evening of the 12th we got a phonecall from Freddie (aged 9) in Kent, who wanted to know how to see the shooting stars. A good job I revised ! After offering advice on how to stay warm and which way to look etc etc, Peta and I decided it would be pretty poor form not to get up to the observatory and see for ourselves, especially when our two grandchildren (Bea (aged 8) too) were doing so for the very first time! 
+  
+Evening conditions at the observatory turned out to be clear until that moon rose and, although we only saw around a dozen each, the experience was suitably inspiring. Down in Kent, Freddie and Bea (and Mummy) had an absolute ball !
+   
+Not for the first time, quite a few members of the public turned up at the (locked) gates on spec hoping to see some Perseids. We explained that the site was not open except on public open evenings and after giving them a few hints on where to look, most happily went away to find another vantage point, although a few decided their best option was to use the layby ! We should consider options for another year (maybe post information on our web page or even make it into an open evening).
+  
+The following charts show all Perseids observed in the UK in 2017 (using a deduplicated dataset of UKMON and NEMETODE events).
+
+
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","Streamcounts_plot_by_station_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","stream_plot_timeline_solar_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","stream_plot_radiant_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","stream_plot_radiant_movement_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","stream_ablation_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","meteor_duration_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","observed_trajectory_LD21_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","abs_magnitude_vs_h1_h2_reg_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","abs_magnitude_vs_h_diff_reg_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+File_In <<- (paste("D:/R Suite/ANALYSIS/REPORTS/PER",params$Rpt_Year,"/","cdeg_overall_PER_",params$Rpt_Year,".jpg",sep=""))
+
+knitr::include_graphics(File_In)
+
+```

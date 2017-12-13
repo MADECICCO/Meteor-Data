@@ -1,0 +1,11 @@
+## Noise Counts
+  
+Obvious electrical noise looks to be a thing of the past . although there are occasions (typically early evenings) when something appears to be switched on (or off).
+  
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Category_Bar_",params$Rpt_Year,"_YTD__Noise.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```

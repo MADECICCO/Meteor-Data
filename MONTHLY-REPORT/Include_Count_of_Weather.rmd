@@ -1,0 +1,11 @@
+## Weather Counts
+  
+It is easy to see the major storms (with thunder and lightning) since records started in 2014. July's storm broke the record for most flashes in a single night as the storm blew up from the south and passed right over the observatory to bother both northern cameras for the rest of the night/early morning. A slight spike in the number of weather events in early November can be attributed to local fireworks displays ! 
+
+```{r echo = FALSE, out.width='100%'}
+
+library(knitr)
+File_In <<- (paste(params$Data_Folder,params$Rpt_Month," ",params$Rpt_Year,"/","Chart_Category_Bar_",params$Rpt_Year,"_YTD__Weather.jpg",sep=""))
+
+knitr::include_graphics(File_In)
+```
