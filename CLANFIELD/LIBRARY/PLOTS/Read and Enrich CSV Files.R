@@ -300,7 +300,9 @@
                         }
                         else {
                                 ## set mmax index to collect data up to end of previous calendar month
-                                mmax <<- as.numeric(month(today())) -1 +2     ## plus 2 is to skip ALL and YTD entries in month array
+                                ##mmax <<- as.numeric(month(today())) -1 +2     ## plus 2 is to skip ALL and YTD entries in month array
+                                ## code changed from the above to permit a mid month run of the script (eg to capture Geminids)
+                                mmax <<- as.numeric(month(today())) +2     ## plus 2 is to skip ALL and YTD entries in month array
                                 }        
                 }
                 else {
