@@ -1,3 +1,5 @@
+
+
 #Ocategory_Bar <<- function(Oyear,Omonth="",Ocategory) {
 {
         #######################################################################################################
@@ -37,7 +39,29 @@
                         All_Category_Data <<- mutate(All_Category_Data,Plot_Month = Month)
                 }
         }        
-                
+
+        ##########################################################################
+        ## code to limit chart output to three years
+        if (Oyear == "ROLL") {
+          Oyear <<- "ALL"
+          Catrows <<- dim(All_Category_Data)[1]
+          Lastrow <<- All_Category_Data[Catrows,]
+          if (nchar(Lastrow$Month) == 1) {
+            Filter_Date <<- paste(Lastrow$Year,"0",Lastrow$Month,sep="")
+            Filter_Date <<- as.numeric(Filter_Date) - 299
+          }
+          else {
+            Filter_Date <<- paste(Lastrow$Year,Lastrow$Month,sep="")
+            if (Lastrow$Month == 12) {
+              Filter_Date <<- as.numeric(Filter_Date) - 211
+            }
+            else {
+              Filter_Date <<- as.numeric(Filter_Date) - 299
+            }
+          }
+          All_Category_Data <<- filter(All_Category_Data,Plot_Month > Filter_Date)
+        }
+        ##########################################################################                
               
         ## Prepare data for charts of the specified camera
         if (Ocategory == "ALL") {}
